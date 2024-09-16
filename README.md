@@ -10,10 +10,10 @@ Este repositório documenta algumas Landing Pages para meu portfólio. Ele cont�
 
 ## Conteúdo
 * **Projetos:**
-    * [**Riovers**](): Website para uma empresa ficcional que oferece tours pelo mundo.
+    * [**Riovers**](https://github.com/MatheEduar/Landing-Pages/tree/main/Riovers): Website para uma empresa ficcional que oferece tours pelo mundo.
 
 * **Cursos:**
     * [**Advanced CSS and Sass: Flexbox, Grid, Animations and More!**](https://www.udemy.com/course/advanced-css-and-sass/) - Jonas Schmedtmann
 * **Recursos:**
     * https://bennettfeely.com/clippy/
-    
+    * https://flatuicolors.com

@@ -26,29 +26,17 @@ body {
     height: 95vh;
     background-image: 
         linear-gradient(
-            to right bottom,
+            to left top,
             rgba(116, 186, 255, 0.7),
-            rgba(9, 133, 227, 0.7)),
+            rgba(9, 133, 227, 0.9)),
         url(../imgs/beautiful-natural-view-landscape.jpg);
     background-size: cover;
     background-position: top;
-    border-radius: 30px 0 30px 30px;
+    border-radius: 10% 0;
     position: relative;
 
-    clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0% 100%);
+    /* clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0% 100%); */
 
-    & .logo-box {
-        position: absolute;
-        top: 80px;
-        left: 40px;
-
-        & .logo {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            opacity: 0.7;
-        }
-    }
 
     & .text-box {
         position: absolute;
@@ -61,12 +49,16 @@ body {
         & .heading-primary {
             color: #fff;
             text-transform: uppercase;
+            backface-visibility: hidden;
     
             & .heading-primary-main {
                 display: block;
                 font-size: 60px;
                 font-weight: 400;
                 letter-spacing: 25px;
+
+                animation: moveInLeft 1.5s ease-out;
+                
             }
     
             & .heading-primary-sub {
@@ -74,6 +66,9 @@ body {
                 font-size: 20px;
                 font-weight: 700;
                 letter-spacing: 8px;
+
+                animation: moveInRight 1.5s ease-out;
+    
             }
     
         }
@@ -81,3 +76,34 @@ body {
     }
 }
 
+@keyframes moveInLeft{
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    40%{
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight{
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    40%{
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
