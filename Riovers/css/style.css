@@ -19,9 +19,11 @@ body {
     font-size: 16px;
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 20px;
 }
 
+
+/* * HEADER */
 .header {
     height: 95vh;
     background-image: 
@@ -37,7 +39,7 @@ body {
 
     /* clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0% 100%); */
 
-
+    /* * ESTILIZAÇÃO DA CAIXA DE TEXTO */
     & .text-box {
         position: absolute;
         top: 50%;
@@ -45,11 +47,12 @@ body {
         transform: translate(-50%, -50%);
         text-align: center;
 
-
+        /* * ESTILIZAÇÂO DO TÍTULO DO HEADER */
         & .heading-primary {
             color: #fff;
             text-transform: uppercase;
             backface-visibility: hidden;
+            margin-bottom: 40px;
     
             & .heading-primary-main {
                 display: block;
@@ -72,9 +75,46 @@ body {
             }
     
         }
+
+        /* * ESTILIZAÇÃO DE BOTÕES */
+        & .btn:link,
+        & .btn:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 15px 40px;
+            display: inline-block;
+            border-radius: 100px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: all .2s;
+        }
+
+        & .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+        
+        & .btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+        }
+
+        & .btn-header {
+            letter-spacing: 4px;
+            animation: moveInUp .5s ease-out .75s;
+            animation-fill-mode: backwards;
+        }
+
+        /* * CORES DOS BOTÕES */
+        & .btn-white {
+            background-color: #fff;
+            color: #777;
+        }
     
     }
 }
+
+
+/* * ANIMAÇÕES */
 
 @keyframes moveInLeft{
     0% {
@@ -105,5 +145,19 @@ body {
     100% {
         opacity: 1;
         transform: translate(0);
+    }
+}
+
+@keyframes moveInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px)
+    }
+    40% {
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
