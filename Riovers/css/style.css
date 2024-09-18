@@ -4,7 +4,6 @@ Light Blue:#74b9ff
 Medium Blue:#00cec9
 Dark Blue: #0984e3
 
-
 */
 
 * {
@@ -43,7 +42,7 @@ body {
     /* clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0% 100%); */
 
     /* * ESTILIZAÇÃO DA CAIXA DE TEXTO */
-    & .header__text-box {
+    .header__text-box {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -51,13 +50,13 @@ body {
         text-align: center;
 
         /* * ESTILIZAÇÂO DO TÍTULO DO HEADER */
-        & .heading-primary {
+        .heading-primary {
             color: #fff;
             text-transform: uppercase;
             backface-visibility: hidden;
             margin-bottom: 4rem;
     
-            & .heading-primary--main {
+            .heading-primary--main {
                 display: block;
                 font-size: 6rem;
                 font-weight: 400;
@@ -67,7 +66,7 @@ body {
                 
             }
     
-            & .heading-primary--sub {
+            .heading-primary--sub {
                 display: block;
                 font-size: 2rem;
                 font-weight: 700;
@@ -80,8 +79,8 @@ body {
         }
 
         /* * ESTILIZAÇÃO DE BOTÕES */
-        & .btn:link,
-        & .btn:visited {
+        .btn:link,
+        .btn:visited {
             text-transform: uppercase;
             text-decoration: none;
             padding: 1.5rem 4rem;
@@ -92,24 +91,24 @@ body {
             font-size: 1.6rem;
         }
 
-        & .btn:hover {
+        .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
         }
         
-        & .btn:active {
+        .btn:active {
             transform: translateY(-1px);
             box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.4);
         }
 
-        & .btn--animated {
+        .btn--animated {
             letter-spacing: 0.4rem;
             animation: moveInUp .5s ease-out .75s;
             animation-fill-mode: backwards;
         }
 
         /* * CORES DOS BOTÕES */
-        & .btn--white {
+        .btn--white {
             background-color: #fff;
             color: #777;
         }
@@ -126,7 +125,7 @@ body {
         transform: translateX(-100px);
     }
 
-    40%{
+    40% {
         transform: translateX(10px);
     }
 

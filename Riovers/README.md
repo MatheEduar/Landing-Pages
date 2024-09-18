@@ -2,7 +2,7 @@
 
 Um Website para uma empresa fictícia de turismo chamada Riovers, aqui é demonstrado
 conceitos como Design Responsivo, Código escalável e sustentável, e Performace Web, utilizando
-o modelo construccional **BEM**: **B**lock **E**lement **M**odifier e a arquitetura 
+SCSS, o modelo construccional **BEM**: **B**lock **E**lement **M**odifier e a arquitetura 
 **Padrão 7-1**
 
 ## Design Responsivo
