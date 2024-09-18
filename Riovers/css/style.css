@@ -13,13 +13,16 @@ Dark Blue: #0984e3
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
     line-height: 1.7;
     color: #777;
-    padding: 20px;
+    padding: 2rem;
 }
 
 
@@ -40,7 +43,7 @@ body {
     /* clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0% 100%); */
 
     /* * ESTILIZAÇÃO DA CAIXA DE TEXTO */
-    & .text-box {
+    & .header__text-box {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -52,23 +55,23 @@ body {
             color: #fff;
             text-transform: uppercase;
             backface-visibility: hidden;
-            margin-bottom: 40px;
+            margin-bottom: 4rem;
     
-            & .heading-primary-main {
+            & .heading-primary--main {
                 display: block;
-                font-size: 60px;
+                font-size: 6rem;
                 font-weight: 400;
-                letter-spacing: 25px;
+                letter-spacing: 2.5rem;
 
                 animation: moveInLeft 1.5s ease-out;
                 
             }
     
-            & .heading-primary-sub {
+            & .heading-primary--sub {
                 display: block;
-                font-size: 20px;
+                font-size: 2rem;
                 font-weight: 700;
-                letter-spacing: 8px;
+                letter-spacing: 0.8rem;
 
                 animation: moveInRight 1.5s ease-out;
     
@@ -81,31 +84,32 @@ body {
         & .btn:visited {
             text-transform: uppercase;
             text-decoration: none;
-            padding: 15px 40px;
+            padding: 1.5rem 4rem;
             display: inline-block;
-            border-radius: 100px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-radius: 10rem;
+            box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
             transition: all .2s;
+            font-size: 1.6rem;
         }
 
         & .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
         }
         
         & .btn:active {
             transform: translateY(-1px);
-            box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.4);
         }
 
-        & .btn-header {
-            letter-spacing: 4px;
+        & .btn--animated {
+            letter-spacing: 0.4rem;
             animation: moveInUp .5s ease-out .75s;
             animation-fill-mode: backwards;
         }
 
         /* * CORES DOS BOTÕES */
-        & .btn-white {
+        & .btn--white {
             background-color: #fff;
             color: #777;
         }
