@@ -1,166 +1,106 @@
-/* Colors
-
-Light Blue:#74b9ff
-Medium Blue:#00cec9
-Dark Blue: #0984e3
-
-*/
-
+@charset "UTF-8";
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
 html {
-    font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
 body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
-    color: #777;
-    padding: 2rem;
-}
-
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 2rem; }
 
 /* * HEADER */
 .header {
-    height: 95vh;
-    background-image: 
-        linear-gradient(
-            to left top,
-            rgba(116, 186, 255, 0.7),
-            rgba(9, 133, 227, 0.9)),
-        url(../imgs/beautiful-natural-view-landscape.jpg);
-    background-size: cover;
-    background-position: top;
-    border-radius: 10% 0;
-    position: relative;
-
-    /* clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0% 100%); */
-
-    /* * ESTILIZAÇÃO DA CAIXA DE TEXTO */
-    .header__text-box {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-
-        /* * ESTILIZAÇÂO DO TÍTULO DO HEADER */
-        .heading-primary {
-            color: #fff;
-            text-transform: uppercase;
-            backface-visibility: hidden;
-            margin-bottom: 4rem;
-    
-            .heading-primary--main {
-                display: block;
-                font-size: 6rem;
-                font-weight: 400;
-                letter-spacing: 2.5rem;
-
-                animation: moveInLeft 1.5s ease-out;
-                
-            }
-    
-            .heading-primary--sub {
-                display: block;
-                font-size: 2rem;
-                font-weight: 700;
-                letter-spacing: 0.8rem;
-
-                animation: moveInRight 1.5s ease-out;
-    
-            }
-    
-        }
-
-        /* * ESTILIZAÇÃO DE BOTÕES */
-        .btn:link,
-        .btn:visited {
-            text-transform: uppercase;
-            text-decoration: none;
-            padding: 1.5rem 4rem;
-            display: inline-block;
-            border-radius: 10rem;
-            box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
-            transition: all .2s;
-            font-size: 1.6rem;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
-        }
-        
-        .btn:active {
-            transform: translateY(-1px);
-            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.4);
-        }
-
-        .btn--animated {
-            letter-spacing: 0.4rem;
-            animation: moveInUp .5s ease-out .75s;
-            animation-fill-mode: backwards;
-        }
-
-        /* * CORES DOS BOTÕES */
-        .btn--white {
-            background-color: #fff;
-            color: #777;
-        }
-    
-    }
-}
-
+  height: 95vh;
+  background-image: linear-gradient(to left top, rgba(116, 185, 255, 0.7), rgba(9, 132, 227, 0.9)), url(../imgs/beautiful-natural-view-landscape.jpg);
+  background-size: cover;
+  background-position: top;
+  border-radius: 10% 0;
+  position: relative;
+  /* clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0% 100%); */
+  /* * ESTILIZAÇÃO DA CAIXA DE TEXTO */ }
+  .header .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* * ESTILIZAÇÂO DO TÍTULO DO HEADER */
+    /* * ESTILIZAÇÃO DE BOTÕES */
+    /* * CORES DOS BOTÕES */ }
+    .header .header__text-box .heading-primary {
+      color: #fff;
+      text-transform: uppercase;
+      backface-visibility: hidden;
+      margin-bottom: 4rem; }
+      .header .header__text-box .heading-primary .heading-primary--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 2.5rem;
+        animation: moveInLeft 1.5s ease-out; }
+      .header .header__text-box .heading-primary .heading-primary--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 0.8rem;
+        animation: moveInRight 1.5s ease-out; }
+    .header .header__text-box .btn:link,
+    .header .header__text-box .btn:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1.5rem 4rem;
+      display: inline-block;
+      border-radius: 10rem;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+      transition: all .2s;
+      font-size: 1.6rem; }
+    .header .header__text-box .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
+    .header .header__text-box .btn:active {
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4); }
+    .header .header__text-box .btn--animated {
+      letter-spacing: 0.4rem;
+      animation: moveInUp .5s ease-out .75s;
+      animation-fill-mode: backwards; }
+    .header .header__text-box .btn--white {
+      background-color: #fff;
+      color: #777; }
 
 /* * ANIMAÇÕES */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  40% {
+    transform: translateX(10px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
-@keyframes moveInLeft{
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-
-    40% {
-        transform: translateX(10px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-@keyframes moveInRight{
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-
-    40%{
-        transform: translateX(-10px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  40% {
+    transform: translateX(-10px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 @keyframes moveInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(-100px)
-    }
-    40% {
-        transform: translateY(10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+  0% {
+    opacity: 0;
+    transform: translateY(-100px); }
+  40% {
+    transform: translateY(10px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }

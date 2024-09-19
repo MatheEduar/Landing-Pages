@@ -4,7 +4,7 @@
   "description": "Landing page para uma empresa fictícia de viagens",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "node-sass sass/main.scss css/style.css"
   },
   "author": "Matheus Eduardo",
   "license": "ISC",
