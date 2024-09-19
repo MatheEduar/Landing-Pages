@@ -1,165 +1,31 @@
+// Abstracts
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+// Base
+@import "./base/animations";
+@import "./base/base";
+@import "./base/typography";
+@import "./base/utilities";
+
+// Components
+@import "./components/btn";
+
+// Layout
+@import "./layout/header";
+
+// Pages
+@import "pages/home";
 
 
-$color-primary: #00cec9;
-$color-primary--light:#74b9ff;
-$color-primary--dark:#0984e3;
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 62.5%;
-}
-
-body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
-    color: #777;
-    padding: 2rem;
-}
 
 
-/* * HEADER */
-.header {
-    height: 95vh;
-    background-image: 
-        linear-gradient(
-            to left top,
-            rgba($color-primary--light, 0.7),
-            rgba($color-primary--dark, 0.9)),
-        url(../imgs/beautiful-natural-view-landscape.jpg);
-    background-size: cover;
-    background-position: top;
-    border-radius: 10% 0;
-    position: relative;
-
-    /* clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0% 100%); */
-
-    /* * ESTILIZAÇÃO DA CAIXA DE TEXTO */
-    .header__text-box {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-
-        /* * ESTILIZAÇÂO DO TÍTULO DO HEADER */
-        .heading-primary {
-            color: #fff;
-            text-transform: uppercase;
-            backface-visibility: hidden;
-            margin-bottom: 4rem;
-    
-            .heading-primary--main {
-                display: block;
-                font-size: 6rem;
-                font-weight: 400;
-                letter-spacing: 2.5rem;
-
-                animation: moveInLeft 1.5s ease-out;
-                
-            }
-    
-            .heading-primary--sub {
-                display: block;
-                font-size: 2rem;
-                font-weight: 700;
-                letter-spacing: 0.8rem;
-
-                animation: moveInRight 1.5s ease-out;
-    
-            }
-    
-        }
-
-        /* * ESTILIZAÇÃO DE BOTÕES */
-        .btn:link,
-        .btn:visited {
-            text-transform: uppercase;
-            text-decoration: none;
-            padding: 1.5rem 4rem;
-            display: inline-block;
-            border-radius: 10rem;
-            box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
-            transition: all .2s;
-            font-size: 1.6rem;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
-        }
-        
-        .btn:active {
-            transform: translateY(-1px);
-            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.4);
-        }
-
-        .btn--animated {
-            letter-spacing: 0.4rem;
-            animation: moveInUp .5s ease-out .75s;
-            animation-fill-mode: backwards;
-        }
-
-        /* * CORES DOS BOTÕES */
-        .btn--white {
-            background-color: #fff;
-            color: #777;
-        }
-    
-    }
-}
 
 
-/* * ANIMAÇÕES */
 
-@keyframes moveInLeft{
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
 
-    40% {
-        transform: translateX(10px);
-    }
 
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
 
-@keyframes moveInRight{
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-
-    40%{
-        transform: translateX(-10px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-@keyframes moveInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(-100px)
-    }
-    40% {
-        transform: translateY(10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
