@@ -34,3 +34,24 @@ body {
     }
     
 }
+
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-primary--light, $color-primary--dark);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // filter: drop-shadow(0 0 0.1rem $color-black);
+}
+
+.heading-terciary {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+}

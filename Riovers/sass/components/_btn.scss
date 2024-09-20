@@ -6,9 +6,9 @@
         padding: 1.5rem 4rem;
         display: inline-block;
         border-radius: 10rem;
-        box-shadow: 0 1rem 2rem rgba($color-black,0.2);
+        box-shadow: 0 1rem 2rem rgba($color-white,0.2);
         transition: all .2s;
-        font-size: 1.6rem;
+        font-size: $default-font-size;
     }
 
     &:hover {
@@ -32,3 +32,31 @@
         color: $color-grey--dark;
     }
 }    
+
+.btn-text {
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-primary--dark;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary--dark;
+        padding: 2px;
+        transition: all .2s;
+    }
+
+    &:hover {
+        color: $color-white;
+        background-color: $color-primary--dark;
+        transform: translateY(-0.2rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+        
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 0.5rem 1rem rgba($color-black,0.15);
+    }
+
+
+}

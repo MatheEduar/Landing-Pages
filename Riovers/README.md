@@ -7,10 +7,30 @@ SCSS, o modelo construccional **BEM**: **B**lock **E**lement **M**odifier e a ar
 
 ## Design Responsivo
 * Layouts Fluídos
+* Unidades Responsivas
+* Imagens Flexivéis
 * Media Queries
-* Imagens Responsivas
-* Unidades Corretas
-* Desktop-first vs Mobile-first
+
+### Layouts Fluídos
+
+* Permitir que a página se adapte para o campo de visão do usuário.
+* Usando a unidade % (ou vh / vw) em vez da unidade `px` para elementos que devem se adaptar ao campo de visão do dispositivo.
+* Usando `max-width` em vez de `width`.
+
+### Unidades Responsívas
+
+* Usando `rem` em vez de `px`
+* Ajudando a manter a escalabilidade do sistema
+
+### Imagens Flexiveis
+
+* Imagens não são escaladas automaticamente quando mudamos o campo de visão do usuário, é necessário se adaptar a isso
+* Sempre usar % para dimensões de imagens, juntamente com a propriedade `max-width`
+
+
+### Media Queries
+
+* Mudar os estilos CSS de acordo com o campo de visão do usuário 
 
 ## Código Escalável e Sustentável
 * Clean-code

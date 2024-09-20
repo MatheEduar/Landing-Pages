@@ -1,0 +1,9 @@
+.row {
+    display: flex;
+    gap: 10rem;
+    justify-content: center;
+}
+
+.col-1-of-2 {
+    max-width: 40rem;
+}
