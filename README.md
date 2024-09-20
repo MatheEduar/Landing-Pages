@@ -17,3 +17,6 @@ Este repositório documenta algumas Landing Pages para meu portfólio. Ele cont�
 * **Recursos:**
     * https://bennettfeely.com/clippy/
     * https://flatuicolors.com
+    * https://linea.io
+    * https://www.flaticon.com 
+    * https://codepen.io/sosuke/pen/Pjoqqp
