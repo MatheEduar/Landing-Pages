@@ -125,6 +125,10 @@ body {
   background-color: #fff;
   color: #777; }
 
+.btn--blue {
+  background-image: linear-gradient(to right, #00cec9, #0984e3);
+  color: #fff; }
+
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
   color: #0984e3;
@@ -193,26 +197,90 @@ body {
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5); }
 
 .tours-card {
-  height: 40rem;
-  width: 30rem;
+  height: 55rem;
+  width: 35rem;
   perspective: 150rem;
   -moz-perspective: 150rem;
-  transition: all .8s; }
+  position: relative; }
   .tours-card__side {
     background-color: #74b9ff;
-    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
-    width: 100%;
+    box-shadow: 0 1.5rem 4rem rgba(116, 185, 255, 0.5);
     height: 100%;
-    transition: all .8s; }
+    width: 100%;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden; }
     .tours-card__side--front {
-      background-color: white; }
+      background-color: #fff; }
     .tours-card__side--back {
-      background-color: green;
       transform: rotateY(180deg); }
+      .tours-card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #00cec9, #74b9ff); }
+      .tours-card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #74b9ff, #0984e3); }
+      .tours-card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #00cec9, #0984e3); }
   .tours-card:hover .tours-card__side--front {
-    transform: rotateY(180deg); }
+    transform: rotateY(-180deg); }
   .tours-card:hover .tours-card__side--back {
-    transform: rotateY(180deg); }
+    transform: rotateY(0deg); }
+  .tours-card__img {
+    background-size: cover;
+    height: 23rem;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    background-blend-mode: soft-light; }
+    .tours-card__img--1 {
+      background-image: linear-gradient(to right bottom, #00cec9, #74b9ff), url("../imgs/img-1.jpg"); }
+    .tours-card__img--2 {
+      background-image: linear-gradient(to right bottom, #74b9ff, #0984e3), url("../imgs/img-2.jpg"); }
+    .tours-card__img--3 {
+      background-image: linear-gradient(to right bottom, #00cec9, #0984e3), url("../imgs/img-3.jpg"); }
+  .tours-card__text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8rem;
+    margin-top: 1rem; }
+    .tours-card__text-box__heading {
+      font-size: 2.4rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.1rem;
+      display: inline-block;
+      background-clip: text;
+      -webkit-text-fill-color: transparent; }
+      .tours-card__text-box__heading--1 {
+        background-image: linear-gradient(to right, #00cec9, #74b9ff); }
+      .tours-card__text-box__heading--2 {
+        background-image: linear-gradient(to right, #74b9ff, #0984e3); }
+      .tours-card__text-box__heading--3 {
+        background-image: linear-gradient(to right, #00cec9, #0984e3); }
+    .tours-card__text-box__detail {
+      font-size: 1.6rem; }
+      .tours-card__text-box__detail__ul {
+        list-style: none;
+        text-align: center; }
+      .tours-card__text-box__detail__ul li {
+        padding: .6rem; }
+        .tours-card__text-box__detail__ul li:not(:last-child) {
+          border-bottom: 1px solid #777; }
+  .tours-card__side--back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #444; }
+    .tours-card__side--back span {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem; }
+    .tours-card__side--back h4 {
+      font-size: 6.4rem;
+      font-weight: 300;
+      margin-bottom: 4rem; }
 
 .row {
   display: flex;
@@ -224,7 +292,7 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to left top, rgba(0, 206, 201, 0.7), rgba(9, 132, 227, 0.9)), url(../imgs/beautiful-natural-view-landscape.jpg);
+  background-image: linear-gradient(to left top, rgba(0, 206, 201, 0.7), rgba(9, 132, 227, 0.9)), url(../imgs/img-3.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
