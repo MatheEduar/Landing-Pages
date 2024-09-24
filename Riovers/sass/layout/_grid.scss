@@ -1,7 +1,13 @@
 .row {
     display: flex;
-    gap: 8rem;
     justify-content: center;
+    gap: 8rem;
+}
+
+.row-stories {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
 }
 
 .col-1-of-2 {

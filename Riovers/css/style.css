@@ -99,7 +99,21 @@ body {
   margin-bottom: 8rem; }
 
 .u-margin-top-big {
-  margin-top: 8rem; }
+  margin-top: 16rem; }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.2;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -203,20 +217,45 @@ body {
   width: 70%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 3px;
   padding: 6rem;
-  padding-left: 9rem; }
+  padding-left: 9rem;
+  transform: skewX(-12deg);
+  transition: all 2s;
+  backface-visibility: hidden; }
   .story__shape {
     width: 15rem;
     height: 15rem;
-    background-color: blue;
     float: left;
     -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-2rem); }
+    transform: translateX(-2rem) skew(12deg);
+    position: relative; }
+  .story__img {
+    width: 100%;
+    backface-visibility: hidden; }
+  .story__text {
+    transform: skewX(12deg); }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__img {
+    filter: blur(6px) brightness(80%); }
 
 .tours-card {
   height: 55rem;
@@ -306,8 +345,13 @@ body {
 
 .row {
   display: flex;
-  gap: 8rem;
-  justify-content: center; }
+  justify-content: center;
+  gap: 8rem; }
+
+.row-stories {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem; }
 
 .col-1-of-2 {
   max-width: 40rem; }
@@ -349,4 +393,4 @@ body {
 
 .section-stories {
   padding: 15rem 0;
-  background-color: #f0f0f0; }
+  position: relative; }
